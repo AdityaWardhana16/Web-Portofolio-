@@ -522,51 +522,54 @@ footer p {
 
 /* About Page Styles */
 .about {
-    padding: 150px 20px 50px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+  padding: 150px 20px 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about h1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 50px;
-    color: #000;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  color: #000;
 }
 
 
-.profile-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
+.media-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: nowrap;
 }
 
-.profile-image {
-    width: 700px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 50px;
+.side-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.about-text {
-    max-width: 700px;
+.side-images img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.about-text p {
-    line-height: 1.7;
-    margin-bottom: 20px;
-    color: #333;
+.side-images img:hover {
+  transform: scale(1.05);
 }
 
-.about-text h2 {
-    font-size: 1.4em;
-    letter-spacing: 2px;
-    color: #000;
-    margin: 40px 0 40px;
+.main-image img {
+  width: 480px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
+
+
 
 
 /* Experience Section */
@@ -1083,16 +1086,67 @@ footer p {
     }
 }
 
-.btn-lihat-lainnya {
-    background-color: #1a1a2e;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+.media-gallery-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  min-height: 500px;
 }
 
-.no-underline {
-    text-decoration: none;
-    color: inherit;
+.main-image img {
+  width: 480px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  position: relative; /* <-- wajib untuk z-index berlaku */
+  z-index: 10; /* <-- angka lebih besar dari gambar lainnya */
 }
+
+
+.floating-images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* biar gak ganggu klik */
+}
+
+.floating-img {
+  position: absolute;
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Atur posisi masing-masing gambar secara bebas */
+.img1 { top: 10%; left: 14%; animation-delay: 0s;}
+.img2 { top: 33%; left: 10%; animation-delay: 1s;}
+.img3 { bottom: 25%; left: 15%; animation-delay: 2s;}
+
+.img4 { top: 10%; right: 14%; animation-delay: 1.5s;}
+.img5 { top: 33%; right: 10%; animation-delay: 1.5s;}
+.img6 { bottom: 25%; right: 15%; animation-delay: 2.5s;}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.floating-img {
+  position: absolute;
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: float 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+
