@@ -58,6 +58,14 @@ nav {
     transition: color 0.3s ease;
 }
 
+.nav-links a.active {
+    color: #000080;
+    font-weight: 700;
+    border-bottom: 2px solid #000080;
+    padding-bottom: 4px;
+}
+
+
 .nav-links a:hover {
     color: #000080;
 }
@@ -533,6 +541,23 @@ footer p {
   margin-bottom: 50px;
   color: #000;
 }
+
+.about-text {
+  max-width: 800px;
+  margin: 30px auto 60px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+}
+
+.about-text p,
+.about-text h2 {
+  margin: 20px 0; /* sama rata atas dan bawah */
+}
+
 
 
 .media-gallery {
@@ -1087,13 +1112,13 @@ footer p {
 }
 
 .media-gallery-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  min-height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    min-height: 500px;
 }
 
 .main-image img {
