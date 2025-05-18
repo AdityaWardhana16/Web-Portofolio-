@@ -95,13 +95,16 @@ main {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/image 8.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/aditya.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 0 20px;
     margin-top: 60px;
 }
@@ -273,6 +276,7 @@ footer p {
     padding: 150px 20px 50px;
     max-width: 1200px;
     margin: 0 auto;
+        
 }
 
 .portfolio h1 {
