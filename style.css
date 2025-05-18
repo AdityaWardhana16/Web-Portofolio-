@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
 }
 
 
@@ -538,6 +539,7 @@ footer p {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+  font-family: 'Rubik', sans-serif;
 }
 
 .about h1 {
