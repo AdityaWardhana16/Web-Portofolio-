@@ -62,7 +62,6 @@ nav {
 .nav-links a.active {
     color: #000080;
     font-weight: 700;
-    border-bottom: 2px solid #000080;
     padding-bottom: 4px;
 }
 
@@ -1109,7 +1108,7 @@ footer p {
 
 .prev-post:hover,
 .next-post:hover {
-    color: #000080;
+    color: #1a1a2e;
 }
 
 /* Responsive Design */
