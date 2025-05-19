@@ -104,22 +104,28 @@
 
         <section class="skills">
             <h2>SKILLS I'M LEARNING</h2>
+            <p>Exploring and learning my knowledge in these areas.</p>
             <div class="skills-icons">
                 <i class="fab fa-html5"></i>
                 <i class="fab fa-css3-alt"></i>
                 <i class="fab fa-js"></i>
             </div>
-            <p>Exploring and learning my knowledge in these areas.</p>
         </section>
 
         <section class="hobby">
   <h2>HOBBY & ACTIVITY</h2>
-  <div class="hobby-slider">
-    <div class="slides">
-      <img src="images/a83c6d06140d17a9be83e4f025d4e511.jpg" alt="Hobby 1" />
-      <img src="images/spotify.jpg" alt="Hobby 2" />
-      <img src="images/coding.jpg" alt="Hobby 3" />
+  <div class="hobby-slider-container">
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    
+    <div class="hobby-slider">
+      <div class="slides" id="slideTrack">
+        <img src="images/a83c6d06140d17a9be83e4f025d4e511.jpg" alt="Hobby 1" />
+        <img src="images/spotify.jpg" alt="Hobby 2" />
+        <img src="images/coding.jpg" alt="Hobby 3" />
+      </div>
     </div>
+    
+    <button class="next" onclick="nextSlide()">&#10095;</button>
   </div>
 </section>
     </main>
@@ -149,3 +155,23 @@
     </footer>
 </body>
 </html>
+
+<script>
+let currentSlide = 0;
+const slides = document.getElementById("slideTrack");
+const totalSlides = slides.children.length;
+
+function updateSlidePosition() {
+  slides.style.transform = `translateX(-${currentSlide * 600}px)`;
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateSlidePosition();
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  updateSlidePosition();
+}
+</script>

@@ -1195,23 +1195,25 @@ footer p {
 
 .hobby {
   text-align: center;
-  margin-bottom: 50px;
+  margin-top: 40px;
+}
+
+.hobby-slider-container {
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
 }
 
 .hobby-slider {
+  position: relative;
   width: 600px;
-  height: 300px;
-  overflow: hidden;
   margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .slides {
   display: flex;
-  width: 300%;
-  height: 100%;
-  animation: slide 9s infinite;
+  transition: transform 0.5s ease;
 }
 
 .slides img {
@@ -1221,9 +1223,60 @@ footer p {
   flex-shrink: 0;
 }
 
-@keyframes slide {
-  0%, 33% { transform: translateX(0%); }
-  36%, 66% { transform: translateX(-100%); }
-  69%, 99% { transform: translateX(-200%); }
-  100% { transform: translateX(0%); }
+.slide-item {
+  min-width: 100%;
+  text-align: center;
+  position: relative;
 }
+
+.slide-item img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Keterangan di bawah gambar */
+.caption {
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid rgb(110, 35, 35);
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  backdrop-filter: blur(3px);
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+button.prev {
+  left: 10px; /* sesuaikan dengan kebutuhan */
+}
+
+button.next {
+  right: 10px;
+}
+
