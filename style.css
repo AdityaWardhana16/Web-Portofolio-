@@ -1193,4 +1193,37 @@ footer p {
   z-index: 1;
 }
 
+.hobby {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
+.hobby-slider {
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: slide 9s infinite;
+}
+
+.slides img {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0%, 33% { transform: translateX(0%); }
+  36%, 66% { transform: translateX(-100%); }
+  69%, 99% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
