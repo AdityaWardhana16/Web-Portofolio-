@@ -277,7 +277,10 @@ footer p {
     padding: 150px 20px 50px;
     max-width: 1200px;
     margin: 0 auto;
-        
+}
+
+.portfolio a {
+    text-decoration: none;
 }
 
 .portfolio h1 {
@@ -453,6 +456,11 @@ footer p {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.blog-card a{
+    text-decoration: none;
 }
 
 .blog-card:hover {
